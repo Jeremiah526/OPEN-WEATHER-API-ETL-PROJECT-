@@ -14,7 +14,6 @@ city is the location you want to get weather data for.
 cnt=240 specifies how many forecast hours to retrieve (default is 240).
 appid is your API key, which gives access to the data.
 
-
 2. Transform (Data Cleaning and Processing)
 The second step is transformation, where the raw data is cleaned, formatted, and transformed into a useful structure.
 Temperature Conversion: The temperature from the OpenWeather API is in Kelvin, but we need it in Celsius for easier understanding.
@@ -28,13 +27,10 @@ Wind Speed and Direction
 Cloudiness, Rain, Snow
 Each piece of data is cleaned, transformed (e.g., converting timestamps to readable date/time), and added to a list of dictionaries.
 
-
 3. Load (Storing Data in PostgreSQL)
 The final step is loading, where we save the processed data into a database for later access and analysis.
 Database Connection: The program connects to a PostgreSQL database using SQLAlchemy. The credentials (username, password, database name, etc.) are used to establish the connection.
 Storing Data: The DataFrame is loaded into a PostgreSQL table using the to_sql() method
-
-
 
 
 ETL Process Flow Summary
@@ -56,7 +52,6 @@ Key Considerations
 Data Size: The program fetches a large amount of data (up to 240 hours of forecast data). This could potentially impact performance, so consider reducing the cnt parameter if needed.
 Error Handling: The code currently doesn't handle errors like connection issues with the API or database. You may want to add try-except blocks to handle such issues gracefully.
 Data Quality: Data from APIs can sometimes be incomplete or incorrect. Consider adding checks for missing values or outliers.
-
 
 
 Possible Enhancements
