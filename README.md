@@ -48,6 +48,21 @@ Load:
 Connect to a PostgreSQL database.
 Insert the transformed data into a database table for persistent storage.
 
+Running the ETL Program
+
+Set Up:
+Install required libraries: requests, pandas, matplotlib, sqlalchemy, psycopg2.
+Get your OpenWeather API key and replace the placeholder in the code.
+Set up a PostgreSQL database and update the connection details in the script.
+
+Execution:
+Run the script in a Python environment (e.g., Jupyter Notebook or Python IDE).
+The program will fetch weather data, process it, generate a temperature chart, and store the processed data in your database.
+
+Outcome:
+You will see a chart displaying temperature trends over time.
+The processed data will be available in the specified PostgreSQL database for further querying and analysis.
+
 Key Considerations
 Data Size: The program fetches a large amount of data (up to 240 hours of forecast data). This could potentially impact performance, so consider reducing the cnt parameter if needed.
 Error Handling: The code currently doesn't handle errors like connection issues with the API or database. You may want to add try-except blocks to handle such issues gracefully.
